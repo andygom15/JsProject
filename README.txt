@@ -1,0 +1,1 @@
+Small JavaScript Project that shows a screen keyboard and allows you to send an email.

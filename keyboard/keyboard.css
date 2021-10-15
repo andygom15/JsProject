@@ -1,0 +1,144 @@
+ .keyboard {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 0;
+    background: #004134;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+    user-select: none;
+    transition: bottom 0.4s;
+}
+
+.keyboard--hidden {
+    width: -100%;
+}
+
+.keyboard__keys {
+    text-align: center;
+}
+
+.keyboard__key {
+    height: 45px;
+    width: 6%;
+    max-width: 90px;
+    margin: 3px;
+    border-radius: 4px;
+    border: none;
+    background: rgba(255,255,255,0.2);
+    color: #ffffff;
+    font-size: 1.05rem;
+    outline: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: top;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+}
+
+.keyboard__key:active { 
+    background: rgba(255,255,255,0.12);
+}
+
+.keyboard__key--wide {
+    width: 12%;
+}
+
+.keyboard__key--extra-wide {
+    width: 36%;
+    max-width: 500px;
+}
+
+.keyboard__key--activatable::after {
+    content: '';
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 50%;
+}
+
+.keyboard__key--active::after {
+    content: '';
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #00ff88;
+    border-radius: 50%;
+}
+
+.keyboard__key--dark {
+    background: rgba(0,0,0,0.25);
+}
+
+.textbox {
+    margin: auto;
+    text-align: left;
+    border-radius: 10px;
+    font-size: 14px;
+    height: 18px;
+    padding: 8px 12px;
+    width: 90%;
+    border:  solid #004134;
+}
+
+.content {
+    height: 250px;
+}
+
+.center {
+    margin: auto;
+    width: 80%;
+}
+
+.send_button {
+    border-radius: 50px;
+    color: #004134;
+    width: 50%;
+    max-width: 500px;
+    padding: 8px 12px;
+}
+.send_button:active {
+    border-radius: 50px;
+    background-color: #606362;
+    width: 50%;
+    max-width: 500px;
+    padding: 8px 12px;
+}
+
+h1 {
+    color: #004134;
+    font-family: sans-serif;
+}
+
+
+
+@media only screen and (max-width: 484px) {
+    .keyboard__key--wide {
+        width: 9%;
+    }
+    .content {
+        height: 100px;
+    }
+
+}
+
+@media only screen and (max-width: 382px) {
+    .keyboard__key--wide {
+        width: 6%;
+    } 
+}
+
+@media only screen and (min-width: 600px) {
+    .textbox {
+        max-width: 500px;
+        width: 50%;
+    }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+    <title>VIRTUAL KEYBOARD w/ HTML, CSS & JS</title>
+    <meta name="viewport" content="width=device-with, initial-scale=1.0">
+    <meta charset = "utf-8">
+    <link rel="stylesheet" href=keyboard/keyboard.css>
+    <script src=keyboard/keyboard.js></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div class="upper center"> 
+        <h1>Write an email and send it!</h1>
+
+        <!--h3>Features</h3>
+        <ul>
+            <li>Easy to integrate</li>
+            <li>Responsive</li>
+            <li>Vanilla JS (<strong>no libraries requiered!</strong>)</li>
+        </ul-->
+        <div class="mail">
+            <textarea id="mailto" class="center textbox" placeholder="Email address" onclick="selectTextbox(this)"></textarea>
+            <br>
+            <textarea id="subject" class="center textbox" placeholder="Subject" onclick="selectTextbox(this)"></textarea>
+            <br>
+            <textarea id="content" class="center textbox content" placeholder="Type the body of your email" onclick="selectTextbox(this)"></textarea>
+            <br>
+            <input type="button" class="center send_button" value="SEND" onclick="sendEmail()"/>
+        </div>
+    </div>
+    
+    <div class="keyboard">
+        <div class="keyboard__keys">
+   
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">1</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">2</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">3</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">4</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">5</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">6</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">7</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">8</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">9</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">0</button>
+            <button type="button" id="backspace"  class="keyboard__key keyboard__key--wide backspace" onclick="keyDown(this)">
+                <i class="material-icons">backspace</i>
+            </button>
+            <br>
+            
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">q</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">w</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">e</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">r</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">t</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">y</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">u</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">i</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">o</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">p</button>
+            <br>
+            
+            <button type="button" id="keyboard_capslock"  class="keyboard__key keyboard__key--wide keyboard__key--activatable" onclick="toggleCapsLock(this)">
+                <i class="material-icons">keyboard_capslock</i>
+            </button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">a</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">s</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">d</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">f</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">g</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">h</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">j</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">k</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">l</button>
+            <button type="button" id="enter" class="keyboard__key keyboard__key--wide enter" onclick="keyDown(this)">
+                <i class="material-icons">keyboard_return</i>
+            </button>
+            <br>
+            
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">z</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">x</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">c</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">v</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">b</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">n</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">m</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">,</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">.</button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">?</button>
+            <br>
+
+            
+            <button type="button" id="space_bar" class="keyboard__key keyboard__key--extra-wide space_bar" onclick="keyDown(this)">
+                <i class="material-icons">space_bar</i>
+            </button>
+            <button type="button" class="keyboard__key letter" onclick="keyDown(this)">@</button>
+            <br>
+        </div>
+    </div>
+
+    
+</body>
