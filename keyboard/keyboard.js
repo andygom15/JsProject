@@ -46,8 +46,6 @@ function sendEmail() {
     var mailto = document.getElementById("mailto").value;
     var subject = document.getElementById("subject").value;
     var content = document.getElementById("content").value;
-    console.log(TOKEN);
-    console.log(EMAIL_ADDRESS);
 
     flag = validateEmail(mailto);
     if (flag){
