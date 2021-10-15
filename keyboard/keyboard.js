@@ -1,6 +1,7 @@
 var textboxSelected;
 let re = /\S+@\S+\.\S+/;
 
+
 function toggleCapsLock() {
     element = document.getElementById("keyboard_capslock");
     letters = document.getElementsByClassName("letter");
@@ -45,13 +46,15 @@ function sendEmail() {
     var mailto = document.getElementById("mailto").value;
     var subject = document.getElementById("subject").value;
     var content = document.getElementById("content").value;
+    console.log(TOKEN);
+    console.log(EMAIL_ADDRESS);
 
     flag = validateEmail(mailto);
     if (flag){
         Email.send({
-            SecureToken : "572bfd97-75d9-4bc5-a39f-10e458662f32",
+            SecureToken : TOKEN,
             To : mailto,
-            From : "dummy.email.for.js.project@gmail.com",
+            From : EMAIL_ADDRESS,
             Subject : subject,
             Body : content
         }).then(
